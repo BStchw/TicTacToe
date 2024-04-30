@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Game {
     Board gameBoard = new Board();
 
-    Game()  {
+    public Game()  {
         System.out.println("TicTacToe game begins!");
     }
 
@@ -40,8 +40,14 @@ public class Game {
                         System.out.println("Player " + currentPlayer + " won the game!");
                         break;
                     }
+                    else if (gameBoard.isDraw()) {
+                        System.out.println("The game ended in a draw!");
+                        break;
+                    }
+                    else {
 
-                    currentPlayer = (currentPlayer == 'O') ? 'X' : 'O';
+                        currentPlayer = (currentPlayer == 'O') ? 'X' : 'O';
+                    }
                 }
                 else {
                     throw new IllegalArgumentException("There should be another number of arguments");

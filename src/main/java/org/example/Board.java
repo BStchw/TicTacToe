@@ -3,7 +3,7 @@ package org.example;
 public class Board {
     private char[][] cells;
 
-    Board() {
+    public Board() {
         this.cells = new char[3][3];
 
         for(int i=0; i < 3; i++)   {
@@ -57,4 +57,16 @@ public class Board {
             return false;
         }
     }
+
+    public boolean isDraw() {
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (cells[i][j] == '_') {
+                    return false;
+                }
+            }
+        }
+        return !isPlayerWon('X') && !isPlayerWon('O');
+    }
+
 }
