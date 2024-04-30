@@ -15,8 +15,13 @@ public class Board {
 
     public void drawBoard() {
         for(int i=0; i < 3; i++)   {
-                System.out.println(cells[i][1] + " " + cells[i][1] + " " + cells[i][1]);
+                System.out.println(cells[i][0] + " " + cells[i][1] + " " + cells[i][2]);
         }
+    }
+
+    public char getCellSign(int x, int y)   {
+
+        return cells[x][y];
     }
 
     public boolean isCellFree(char cell)    {
@@ -36,15 +41,15 @@ public class Board {
         cells[x][y] = 'X';
     }
 
-    public boolean isXWon() {
-        if((cells[0][0] == 'X' && cells[0][1] == 'X' && cells[0][2] == 'X') ||
-                (cells[1][0] == 'X' && cells[1][1] == 'X' && cells[1][2] == 'X') ||
-                (cells[2][0] == 'X' && cells[2][1] == 'X' && cells[2][2] == 'X') ||
-                (cells[0][0] == 'X' && cells[1][0] == 'X' && cells[2][0] == 'X') ||
-                (cells[0][1] == 'X' && cells[1][1] == 'X' && cells[2][1] == 'X') ||
-                (cells[0][2] == 'X' && cells[1][2] == 'X' && cells[2][2] == 'X') ||
-                (cells[0][0] == 'X' && cells[1][1] == 'X' && cells[2][2] == 'X') ||
-                (cells[0][2] == 'X' && cells[1][1] == 'X' && cells[2][0] == 'X'))    {
+    public boolean isPlayerWon(char player) {
+        if((cells[0][0] == player && cells[0][1] == player && cells[0][2] == player) ||
+                (cells[1][0] == player && cells[1][1] == player && cells[1][2] == player) ||
+                (cells[2][0] == player && cells[2][1] == player && cells[2][2] == player) ||
+                (cells[0][0] == player && cells[1][0] == player && cells[2][0] == player) ||
+                (cells[0][1] == player && cells[1][1] == player && cells[2][1] == player) ||
+                (cells[0][2] == player && cells[1][2] == player && cells[2][2] == player) ||
+                (cells[0][0] == player && cells[1][1] == player && cells[2][2] == player) ||
+                (cells[0][2] == player && cells[1][1] == player && cells[2][0] == player))    {
             return true;
 
         }
@@ -52,22 +57,4 @@ public class Board {
             return false;
         }
     }
-
-    public boolean isOWon() {
-        if((cells[0][0] == 'O' && cells[0][1] == 'O' && cells[0][2] == 'O') ||
-                (cells[1][0] == 'O' && cells[1][1] == 'O' && cells[1][2] == 'O') ||
-                (cells[2][0] == 'O' && cells[2][1] == 'O' && cells[2][2] == 'O') ||
-                (cells[0][0] == 'O' && cells[1][0] == 'O' && cells[2][0] == 'O') ||
-                (cells[0][1] == 'O' && cells[1][1] == 'O' && cells[2][1] == 'O') ||
-                (cells[0][2] == 'O' && cells[1][2] == 'O' && cells[2][2] == 'O') ||
-                (cells[0][0] == 'O' && cells[1][1] == 'O' && cells[2][2] == 'O') ||
-                (cells[0][2] == 'O' && cells[1][1] == 'O' && cells[2][0] == 'O'))    {
-            return true;
-
-        }
-        else {
-            return false;
-        }
-    }
-
 }
