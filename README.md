@@ -11,13 +11,25 @@ Board: This class represents the game board. It is responsible for drawing the b
 Game: This class handles the game logic. It is responsible for conducting the game, reading player moves from the console, and communicating with the players.
 
 ## Running Instructions
-1. Compile the project using a Java compiler.
-2. Run the Game class in your Java environment.
+
+To run the TicTacToe Game, follow these steps:
+
+1. Make sure you have Java Development Kit (JDK) installed on your system. If not, you can download and install it from the [official website](https://www.oracle.com/java/technologies/javase-downloads.html).
+
+2. Clone this repository to your local machine using Git or download it as a ZIP archive and extract it.
+
+3. Open your terminal or command prompt and navigate to the project directory.
+
+4. Compile the project by executing the following command:
+   `javac *.java`.
+
+5. Once the compilation is successful, run the game by executing the following command:
+   `java Main`.
+6. The game will start, and you can follow the on-screen instructions to play.
 
 ## Playing Instructions
 The game starts by displaying the board in the console.
-Players take turns entering their moves by inputting the column number and row number where they want to place their mark (e.g., "1,1" for the first column and first row).
-The game checks the validity of the move, whether the cell is free, and whether the entered coordinates are correct.
+Players take turns entering their moves by inputting the column number and row number where they want to place their sign (e.g., "1,1" for the first column and first row).
 The game ends when one player wins or when the board is filled (resulting in a draw).
 
 ## Author
