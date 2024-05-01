@@ -21,7 +21,7 @@ public class Board {
 
     public char getCellSign(int x, int y)   {
 
-        return cells[x][y];
+        return cells[y][x];
     }
 
     public boolean isCellFree(char cell)    {
@@ -34,11 +34,11 @@ public class Board {
     }
 
     public void setO(int x, int y)   {
-        cells[x][y] = 'O';
+        cells[y][x] = 'O';
     }
 
     public void setX(int x, int y)   {
-        cells[x][y] = 'X';
+        cells[y][x] = 'X';
     }
 
     public boolean isPlayerWon(char player) {
